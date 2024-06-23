@@ -1,0 +1,101 @@
+node,type,age,gender,category,price,description
+user1,user,18,1,,,
+user2,user,52,1,,,
+user3,user,18,0,,,
+user4,user,57,1,,,
+user5,user,44,0,,,
+user6,user,49,0,,,
+user7,user,42,1,,,
+user8,user,22,1,,,
+user9,user,20,1,,,
+user10,user,58,0,,,
+user11,user,36,0,,,
+user12,user,59,0,,,
+user13,user,42,1,,,
+user14,user,33,1,,,
+user15,user,54,1,,,
+user16,user,50,0,,,
+user17,user,53,0,,,
+user18,user,41,0,,,
+user19,user,41,0,,,
+user20,user,23,1,,,
+user21,user,22,1,,,
+user22,user,54,1,,,
+user23,user,35,1,,,
+user24,user,24,1,,,
+user25,user,27,1,,,
+user26,user,56,1,,,
+user27,user,21,0,,,
+user28,user,54,1,,,
+user29,user,57,1,,,
+user30,user,48,0,,,
+item1,item,,,books,509.1,Football
+item2,item,,,books,17.81,Projector
+item3,item,,,books,408.09,Fiction book
+item4,item,,,clothing,552.4,Craft kit
+item5,item,,,books,297.83,Stuffed animal
+item6,item,,,home,800.04,Puzzle
+item7,item,,,home,805.42,Blender
+item8,item,,,home,988.82,Scarf
+item9,item,,,books,624.62,Board game
+item10,item,,,sports,702.39,Sweater
+item11,item,,,books,803.91,Yoga mat
+item12,item,,,clothing,98.16,Pants
+item13,item,,,books,58.93,Shorts
+item14,item,,,home,22.17,Poetry book
+item15,item,,,books,193.08,Mystery book
+item16,item,,,electronics,847.69,Smartwatch
+item17,item,,,clothing,664.59,Slow cooker
+item18,item,,,toys,857.67,Air fryer
+item19,item,,,home,839.54,Helmet
+item20,item,,,sports,969.82,Portable speaker
+item21,item,,,sports,238.6,Adventure book
+item22,item,,,clothing,612.03,Art supplies
+item23,item,,,books,12.74,Basketball
+item24,item,,,electronics,770.64,Science fiction book
+item25,item,,,clothing,272.65,Drone
+item26,item,,,clothing,871.15,Jeans
+item27,item,,,home,870.25,4K Television
+item28,item,,,toys,109.28,Hat
+item29,item,,,books,332.84,Historical book
+item30,item,,,books,854.99,Soccer ball
+item31,item,,,books,553.29,Tennis racket
+item32,item,,,clothing,277.83,Headphones
+item33,item,,,home,320.02,Golf clubs
+item34,item,,,electronics,445.23,Shirt
+item35,item,,,home,405.69,Biography book
+item36,item,,,clothing,830.96,Washing machine
+item37,item,,,sports,404.84,Skateboard
+item38,item,,,clothing,626.34,Toaster
+item39,item,,,sports,992.28,Lego set
+item40,item,,,clothing,151.93,Fantasy book
+item41,item,,,electronics,579.04,Coat
+item42,item,,,books,183.26,Romance book
+item43,item,,,home,350.57,T-shirt
+item44,item,,,sports,28.45,Baseball bat
+item45,item,,,electronics,648.15,Bicycle
+item46,item,,,clothing,925.51,Refrigerator
+item47,item,,,clothing,697.44,Dishwasher
+item48,item,,,sports,47.27,Cookbook
+item49,item,,,toys,756.71,Dress
+item50,item,,,sports,557.29,Electric kettle
+item51,item,,,home,949.03,Microwave oven
+item52,item,,,books,516.33,Tablet with 8GB RAM
+item53,item,,,toys,152.96,Toy car
+item54,item,,,electronics,966.34,Vacuum cleaner
+item55,item,,,clothing,315.33,Building blocks
+item56,item,,,electronics,42.85,Card game
+item57,item,,,electronics,753.99,Fitness tracker
+item58,item,,,toys,56.03,Running shoes
+item59,item,,,sports,951.89,Smartphone with 6GB RAM
+item60,item,,,books,774.15,Doll house
+item61,item,,,clothing,564.07,Non-fiction book
+item62,item,,,sports,532.49,Camera with 20MP
+item63,item,,,electronics,708.02,Action figure
+item64,item,,,sports,736.85,Skirt
+item65,item,,,toys,308.61,Laptop with 16GB RAM
+item66,item,,,toys,826.22,Dumbbells
+item67,item,,,sports,421.21,E-reader
+item68,item,,,sports,810.16,Jacket
+item69,item,,,books,420.27,Coffee maker
+item70,item,,,electronics,501.92,Gaming console
