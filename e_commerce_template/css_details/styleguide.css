@@ -1,0 +1,12 @@
+:root { 
+  --black: #000000;
+  --white: #ffffff;
+ 
+  --font-size-l: 20px;
+  --font-size-m: 16px;
+  --font-size-xl: 22px;
+ 
+  --font-family-abeezee: "ABeeZee", Helvetica;
+  --font-family-abhaya_libre_extrabold-regular: "Abhaya Libre ExtraBold-Regular", Helvetica;
+  --font-family-acme: "Acme", Helvetica;
+}

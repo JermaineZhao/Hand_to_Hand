@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/store-gallery-2.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <style>
+        .store {
+            overflow-y: auto;
+            max-height: 80vh; /* Adjust this value as needed */
+        }
+        .store-line {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px; /* Adjust this value as needed */
+        }
+        .store-line-card {
+            width: 48%; /* Adjust this value as needed */
+            margin-bottom: 20px; /* Adjust this value as needed */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="store-gallery-2" />
+    <div class="container-center-horizontal">
+        <div class="store-gallery-2 screen">
+            <div class="overlap-group2">
+                <div class="rectangle"></div>
+                <div class="i-phone-x-status_-bar">
+                    <div class="i-phone-x-status-bars-status-bar-black">
+                        <div class="i-phone-x-status-bars-status-bar-black-1">
+                            <div class="time-style">
+                                <div class="time sfprotext-regular-normal-pewter-14px">
+                                    <span class="span0 sfprotext-regular-normal-pewter-14px">9:4</span><span class="span1 sfprotext-regular-normal-pewter-14px">1</span>
+                                </div>
+                            </div>
+                            <img class="cellular-connection" src="img/cellular-connection.svg" alt="Cellular Connection" />
+                            <img class="wifi" src="img/wifi.svg" alt="Wifi" />
+                            <div class="battery">
+                                <div class="overlap-group">
+                                    <div class="capacity"></div>
+                                </div>
+                                <img class="cap" src="img/cap.svg" alt="Cap" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="store"></div>
+                <div class="x5_-elements_-navigation">
+                    <div class="group-copy-3">
+                        <img
+                            class="x5_-elements_-navigation-heart-off"
+                            src="img/5-elements-navigation-heart-off.svg"
+                            alt="5_Elements_Navigation\Heart\Off"
+                        />
+                        <img
+                            class="x5_-elements_-navigation-home-on"
+                            src="img/5-elements-navigation-home-on.svg"
+                            alt="5_Elements_Navigation\Home\On"
+                        />
+                        <div class="x5_-elements_-navigation-bell-off">
+                            <img class="combined-shape" src="img/Button.png" alt="Combined Shape" onclick="document.getElementById('fileInput').click();" />
+                        </div>
+                        <div class="x5_-elements_-navigation-message-off"></div>
+                        <div class="x5_-elements_-navigation-bell-off">
+                            <img class="combined-shape" src="img/combined-shape.svg" alt="Combined Shape" />
+                        </div>
+                    </div>
+                </div>
+                <div class="categories-1 categories-2">
+                    <div class="categories-all categories-2">
+                        <div class="overlap-group1"><div class="all">All</div></div>
+                    </div>
+                    <div class="categories-party categories-2">
+                        <div class="text-3 roboto-normal-mantle-14px">🎉</div>
+                        <div class="party sfprodisplay-normal-pewter-14px">Near Me</div>
+                    </div>
+                    <div class="categories">
+                        <div class="group">
+                            <div class="text roboto-normal-mantle-14px">🏕</div>
+                            <div class="camping sfprodisplay-normal-pewter-14px">Camping</div>
+                        </div>
+                    </div>
+                    <div class="categories">
+                        <div class="group-1">
+                            <div class="overlap-group-1">
+                                <div class="text roboto-normal-mantle-14px">⛱</div>
+                                <div class="surname sfprodisplay-normal-pewter-14px">Beach</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="file" id="fileInput" style="display:none" onchange="uploadFile()">
+    <script>
+        function uploadFile() {
+            var fileInput = document.getElementById('fileInput');
+            var file = fileInput.files[0];
+            var formData = new FormData();
+            formData.append('file', file);
+
+            $.ajax({
+                url: 'http://127.0.0.1:5000/api/upload',
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    alert('File uploaded and script executed');
+                },
+                error: function(error) {
+                    console.error('Error uploading file:', error);
+                    alert('Error uploading file');
+                }
+            });
+        }
+
+
+        
+
+        $(document).ready(function() {
+            $.ajax({
+                url: 'http://127.0.0.1:5000/api/items',
+                method: 'GET',
+                success: function(data) {
+                    console.log('Data fetched:', data);
+                    let storeLine = $('<div class="store-line"></div>');
+                    for (let i = 0; i < data.length; i++) {
+                        if (i > 0 && i % 2 === 0) {
+                            $('.store').append(storeLine);
+                            storeLine = $('<div class="store-line"></div>');
+                        }
+                        let itemCard = $('<div class="store-line-card"></div>');
+                        let itemLink = $('<a></a>').attr('href', 'details.html?item_id=' + data[i].item_id);
+                        itemLink.append('<img class="group-17" src="' + data[i].image_url + '" alt="' + data[i].name + '" />');
+                        itemCard.append(itemLink);
+                        itemCard.append('<div class="name sfprodisplay-regular-normal-pewter-14px">' + data[i].name + '</div>');
+                        itemCard.append('<div class="price sfprodisplay-bold-white-14px">' + data[i].estimated_price + '</div>');
+                        storeLine.append(itemCard);
+                    }
+                    $('.store').append(storeLine);
+                },
+                error: function(error) {
+                    console.error('Error fetching items:', error);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

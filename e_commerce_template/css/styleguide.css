@@ -1,0 +1,63 @@
+:root { 
+  --black: #000000;
+  --mantle: #899a96;
+  --pewter: #96a7af;
+  --pickled-bluewood: #30444e;
+  --white: #ffffff;
+ 
+  --font-size-m: 14px;
+  --font-size-l: 20px;
+  --font-size-xl: 22px;
+ 
+  --font-family-roboto: "Roboto", Helvetica;
+  --font-family-sfprodisplay-bold: "SFProDisplay-Bold", Helvetica;
+  --font-family-sfprodisplay-regular: "SFProDisplay-Regular", Helvetica;
+  --font-family-sfprodisplay-semibold: "SFProDisplay-Semibold", Helvetica;
+  --font-family-sfprotext-regular: "SFProText-Regular", Helvetica;
+  --font-family-abeezee: "ABeeZee", Helvetica;
+  --font-family-abhaya_libre_extrabold-regular: "Abhaya Libre ExtraBold-Regular", Helvetica;
+  --font-family-acme: "Acme", Helvetica;
+}
+
+
+.sfprodisplay-regular-normal-pewter-14px {
+  color: var(--pewter);
+  font-family: var(--font-family-sfprodisplay-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sfprodisplay-bold-white-14px {
+  color: var(--white);
+  font-family: var(--font-family-sfprodisplay-bold);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.sfprotext-regular-normal-pewter-14px {
+  color: var(--pewter);
+  font-family: var(--font-family-sfprotext-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-normal-mantle-14px {
+  color: var(--mantle);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sfprodisplay-normal-pewter-14px {
+  color: var(--pewter);
+  font-family: var(--font-family-sfprodisplay-semibold);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+

@@ -1,0 +1,139 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
+    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/store-gallery-2.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="store-gallery-2" />
+    <div class="container-center-horizontal">
+      <div class="store-gallery-2 screen">
+        <div class="overlap-group2">
+          <div class="rectangle"></div>
+          <div class="i-phone-x-status_-bar">
+            <div class="i-phone-x-status-bars-status-bar-black">
+              <div class="i-phone-x-status-bars-status-bar-black-1">
+                <div class="time-style">
+                  <div class="time sfprotext-regular-normal-pewter-14px">
+                    <span class="span0 sfprotext-regular-normal-pewter-14px">9:4</span
+                    ><span class="span1 sfprotext-regular-normal-pewter-14px">1</span>
+                  </div>
+                </div>
+                <img class="cellular-connection" src="img/cellular-connection.svg" alt="Cellular Connection" />
+                <img class="wifi" src="img/wifi.svg" alt="Wifi" />
+                <div class="battery">
+                  <div class="overlap-group">
+                    <div class="capacity"></div>
+                  </div>
+                  <img class="cap" src="img/cap.svg" alt="Cap" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="store">
+            <div class="store-line">
+              <div class="store-line-card">
+                <img id="image-1" class="group-17" src="img/group-17@2x.png" alt="Group 17" />
+                <div id="name-1" class="name sfprodisplay-regular-normal-pewter-14px">Belt suit blazer</div>
+                <div id="est_price-1" class="price sfprodisplay-bold-white-14px">$120</div>
+              </div>
+              <div class="store-line-card">
+                <img id="image-2" class="group-17" src="img/group-17-copy@2x.png" alt="Group 17 Copy" />
+                <div id="name-2" class="name-3 sfprodisplay-regular-normal-pewter-14px">Belt suit blazer</div>
+                <div id="est_price-2" class="price sfprodisplay-bold-white-14px">$120</div>
+              </div>
+            </div>
+            <div class="store-line">
+              <div class="store-line-card">
+                <img id="image-3" class="group-17" src="img/group-17-1@2x.png" alt="Group 17" />
+                <div id="name-3" class="belt-suit-blazer sfprodisplay-regular-normal-pewter-14px">Belt suit blazer</div>
+                <div id="est_price-3" class="price sfprodisplay-bold-white-14px">$120</div>
+              </div>
+              <div class="store-line-card">
+                <img id="image-4" class="group-17" src="img/group-17-copy-1@2x.png" alt="Group 17 Copy" />
+                <div id="name-4" class="name-3 sfprodisplay-regular-normal-pewter-14px">Belt suit blazer</div>
+                <div id="est_price-4" class="price sfprodisplay-bold-white-14px">$120</div>
+              </div>
+            </div>
+          </div>
+          <div class="x5_-elements_-navigation">
+            <div class="group-copy-3">
+              <img
+                class="x5_-elements_-navigation-heart-off"
+                src="img/5-elements-navigation-heart-off.svg"
+                alt="5_Elements_Navigation\Heart\Off"
+              />
+              <img
+                class="x5_-elements_-navigation-home-on"
+                src="img/5-elements-navigation-home-on.svg"
+                alt="5_Elements_Navigation\Home\On"
+              />
+              <div class="x5_-elements_-navigation-bell-off">
+                <img class="combined-shape" src="img/Button.png" alt="Combined Shape" />
+              </div>
+              <div class="x5_-elements_-navigation-message-off"></div>
+              
+              <!-- <div class="x5_-elements_-navigation-message-off"></div> -->
+              <div class="x5_-elements_-navigation-bell-off">
+                <img class="combined-shape" src="img/combined-shape.svg" alt="Combined Shape" />
+              </div>
+            </div>
+          </div>
+          <div class="categories-1 categories-2">
+            <div class="categories-all categories-2">
+              <div class="overlap-group1"><div class="all">All</div></div>
+            </div>
+            <div class="categories-party categories-2">
+              <div class="text-3 roboto-normal-mantle-14px">🎉</div>
+              <div class="party sfprodisplay-normal-pewter-14px">Near Me</div>
+            </div>
+            <div class="categories">
+              <div class="group">
+                <div class="text roboto-normal-mantle-14px">🏕</div>
+                <div class="camping sfprodisplay-normal-pewter-14px">Camping</div>
+              </div>
+            </div>
+            <div class="categories">
+              <div class="group-1">
+                <div class="overlap-group-1">
+                  <div class="text roboto-normal-mantle-14px">⛱</div>
+                  <div class="surname sfprodisplay-normal-pewter-14px">Beach</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function() {
+          $.ajax({
+              url: 'http://127.0.0.1:5000/api/items',
+              method: 'GET',
+              
+              success: function(data) {
+                console.log('Data fetched:', data);
+                for (let i = 2; i < Math.min(data.length, 6); i++) {
+                  $('#image-' + (i - 1)).attr('src', data[i].image_url);
+                  $('#name-' + (i - 1)).text(data[i].name);
+                  $('#est_price-' + (i - 1)).text(data[i].estimated_price);
+              }
+              },
+              error: function(error) {
+                  console.error('Error fetching items:', error);
+              }
+          });
+      });
+  </script>
+  </body>
+</html> -->
+

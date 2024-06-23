@@ -1,0 +1,65 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400");
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6670ea29564e666d90a74728.6670ea2a564e666d90a7472b.8hrNqg7.hcp.png");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=ABeeZee:400|Acme:400");
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6670ea29564e666d90a74728.6670ea2a564e666d90a7472b.8hrNqg7.hcp.png");
+
+
+@font-face {
+  font-family: "SFProText-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SFProDisplay-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/FontsFree-Net-SFProDisplay-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SFProDisplay-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/SF-Pro-Display-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SFProDisplay-Semibold";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/FontsFree-Net-SFProDisplay-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Abhaya Libre ExtraBold-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/AbhayaLibre-ExtraBold.ttf") format("truetype");
+}
+
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+* {
+  box-sizing: border-box;
+}

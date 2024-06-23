@@ -1,0 +1,156 @@
+.onboarding {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%; /* Change to 100% */
+}
+
+.onboarding .overlap-group {
+  height: 812px;
+  position: relative;
+  width: 375px; /* Change to match the viewport width */
+}
+
+.onboarding .rectangle {
+  background: linear-gradient(180deg, rgb(34, 52, 60) 0.08%, rgb(31, 46, 53) 100%);
+  height: 812px;
+  position: absolute;
+  top: 0;
+  width: 375px;
+}
+
+.onboarding .body-text {
+  color: #96a7af;
+  font-family: var(--font-family-abeezee);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  left: 20px; /* Adjust positioning */
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 400px;
+  width: 335px; /* Adjust to fit within the viewport */
+}
+
+.onboarding .heading {
+  color: var(--white);
+  left: 20px; /* Adjust positioning */
+  top: 428px;
+}
+
+.onboarding .heading-1 {
+  color: #3dd598;
+  left: 20px; /* Adjust positioning */
+  top: 454px;
+}
+
+.onboarding .sign-in {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+  height: 58px;
+  left: 30px; /* Adjust positioning */
+  min-width: 315px;
+  position: absolute;
+  top: 705px;
+}
+
+.onboarding .back {
+  background-color: #286053;
+  border-radius: 12px;
+  height: 58px;
+  width: 58px;
+}
+
+.onboarding .next_-button {
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgb(63.59, 223.05, 158.63) 0%, rgb(62, 213, 152) 100%);
+  border-radius: 12px;
+  box-shadow: 0px 2px 4px #0fda884c;
+  display: flex;
+  height: 58px;
+  min-width: 245px;
+  padding: 20px 28px;
+}
+
+.onboarding .next {
+  color: var(--white);
+  font-family: var(--font-family-acme);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 16px;
+  min-width: 161px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.onboarding .x3-medium_-cards {
+  align-items: flex-start;
+  display: flex;
+  height: 310px;
+  left: 0;
+  min-width: 375px; /* Adjust to fit within the viewport */
+  position: absolute;
+  top: 94px;
+}
+
+/* .onboarding .bitmap {
+  height: 380px;
+  margin-top: -34.93px;
+  width: 341px;
+} */
+
+.onboarding .bitmap {
+  max-width: 100%; /* 调整为你希望的最大宽度，例如50% */
+  max-height: 100%; /* 调整为你希望的最大高度，例如50% */
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+  display: block; /* 确保图片是块级元素 */
+  margin: 0 auto; /* 居中图片 */
+  position: absolute; /* 使用绝对定位 */
+  top: -60px; /* 向上移动图片30像素 */
+  left: 50%; /* 确保图片在水平位置居中 */
+  transform: translateX(-50%); /* 调整水平位置 */
+}
+
+
+.onboarding .store-line-card-heart {
+  height: 36px;
+  left: 40px; /* Adjust positioning */
+  position: absolute;
+  top: 716px;
+  width: 36px;
+}
+
+.onboarding .heading-2 {
+  font-family: var(--font-family-abhaya_libre_extrabold-regular);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  white-space: nowrap;
+  /* color: white; 设置文字颜色为白色 */
+  top: 360px; /* 向上移动文字 */
+  left: 50%; /* 使文字在水平位置居中 */
+  transform: translateX(-50%); /* 调整水平位置 */
+  text-align: center; /* 确保文字内容居中 */
+}
+.onboarding .heading-3 {
+  font-family: var(--font-family-abhaya_libre_extrabold-regular);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  white-space: nowrap;
+  color: white; /* 设置文字颜色为白色 */
+  top: 350px; /* 向上移动文字 */
+  left: 50%; /* 使文字在水平位置居中 */
+  transform: translateX(-50%); /* 调整水平位置 */
+  text-align: center; /* 确保文字内容居中 */
+}

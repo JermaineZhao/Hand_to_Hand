@@ -1,0 +1,364 @@
+/* screen - store-gallery-2 */
+
+.store-gallery-2 {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 812px;
+  overflow: hidden;
+  width: 375px;
+}
+
+.store-gallery-2 .overlap-group2 {
+  height: 814px;
+  margin-left: -1px;
+  margin-top: -1px;
+  position: relative;
+  width: 505px;
+}
+
+.store-gallery-2 .rectangle {
+  background: linear-gradient(180deg, rgb(34, 52, 60) 0.08%, rgb(31, 46, 53) 100%);
+  height: 814px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 377px;
+}
+
+.store-gallery-2 .i-phone-x-status_-bar {
+  align-items: flex-start;
+  display: flex;
+  height: 44px;
+  left: 1px;
+  min-width: 375px;
+  position: absolute;
+  top: 1px;
+}
+
+.store-gallery-2 .i-phone-x-status-bars-status-bar-black {
+  align-items: flex-start;
+  display: flex;
+  width: 375px;
+}
+
+.store-gallery-2 .i-phone-x-status-bars-status-bar-black-1 {
+  align-items: center;
+  display: flex;
+  height: 44px;
+  padding: 12px 14.7px;
+  width: 375px;
+}
+
+.store-gallery-2 .time-style {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  height: 17px;
+  margin-left: 6px;
+  width: 54px;
+}
+
+.store-gallery-2 .time {
+  line-height: normal;
+  margin-top: -0.5px;
+  min-height: 16px;
+  text-align: center;
+  width: 54px;
+}
+
+.store-gallery-2 .span0 {
+  letter-spacing: -0.04px;
+}
+
+.store-gallery-2 .span1 {
+  letter-spacing: 0;
+}
+
+.store-gallery-2 .cellular-connection {
+  height: 11px;
+  margin-left: 219px;
+  margin-top: 2.0px;
+  width: 17px;
+}
+
+.store-gallery-2 .wifi {
+  height: 11px;
+  margin-left: 5px;
+  margin-top: 1.63px;
+  width: 15px;
+}
+
+.store-gallery-2 .battery {
+  align-items: center;
+  display: flex;
+  gap: 1px;
+  margin-left: 5px;
+  margin-top: 2.0px;
+  min-width: 24px;
+}
+
+.store-gallery-2 .overlap-group {
+  align-items: flex-start;
+  border: 1px solid;
+  border-color: #96a7af59;
+  border-radius: 2.67px;
+  display: flex;
+  height: 11px;
+  min-width: 22px;
+  padding: 1.0px 1px;
+}
+
+.store-gallery-2 .capacity {
+  background-color: var(--pewter);
+  border-radius: 1.33px;
+  height: 7px;
+  width: 18px;
+}
+
+.store-gallery-2 .cap {
+  height: 4px;
+  margin-top: 0;
+  width: 1px;
+}
+
+.store-gallery-2 .store {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  left: 29px;
+  min-height: 545px;
+  position: absolute;
+  top: 153px;
+  width: 319px;
+}
+
+.store-gallery-2 .store-line {
+  align-items: flex-start;
+  display: flex;
+  gap: 19px;
+  height: 261px;
+  min-width: 319px;
+}
+
+.store-gallery-2 .store-line-card {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 261px;
+  width: 150px;
+}
+
+.store-gallery-2 .group-17 {
+  height: 180px;
+  width: 150px;
+}
+
+.store-gallery-2 .name {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 11px;
+  min-height: 17px;
+}
+
+.store-gallery-2 .price {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 6px;
+  min-height: 17px;
+}
+
+.store-gallery-2 .belt-suit-blazer {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 11px;
+  min-height: 17px;
+}
+
+.store-gallery-2 .x5_-elements_-navigation {
+  align-items: flex-start;
+  display: flex;
+  height: 96px;
+  left: 1px;
+  min-width: 375px;
+  position: absolute;
+  top: 717px;
+}
+
+.store-gallery-2 .group-copy-3 {
+  align-items: flex-start;
+  background-color: var(--pickled-bluewood);
+  box-shadow: 0px 1px 14px #19282f;
+  display: flex;
+  gap: 51px;
+  height: 96px;
+  min-width: 375px;
+  padding: 25px 38px;
+}
+
+.store-gallery-2 .x5_-elements_-navigation-heart-off {
+  height: 17px;
+  margin-top: 2px;
+  width: 18px;
+}
+
+.store-gallery-2 .x5_-elements_-navigation-home-on {
+  height: 19px;
+  margin-top: 1px;
+  width: 19px;
+}
+
+.store-gallery-2 .x5_-elements_-navigation-message-off {
+  background-image: url(../img/shape.svg);
+  background-size: 100% 100%;
+  height: 19px;
+  margin-top: 1px;
+  width: 19px;
+}
+
+.store-gallery-2 .x5_-elements_-navigation-bell-off {
+  align-items: flex-start;
+  display: flex;
+  height: 22px;
+  min-width: 19px;
+}
+
+.store-gallery-2 .combined-shape {
+  height: 21px;
+  width: 19px;
+}
+
+.store-gallery-2 .x5_-elements_-navigation-star-off {
+  height: 19px;
+  width: 20px;
+}
+
+.store-gallery-2 .categories-1 {
+  gap: 10px;
+  left: 28px;
+  min-width: 477px;
+  position: absolute;
+  top: 69px;
+}
+
+.store-gallery-2 .categories-all {
+  min-width: 53px;
+}
+
+.store-gallery-2 .overlap-group1 {
+  align-items: flex-start;
+  background-color: #3ed598;
+  border-radius: 12px;
+  display: flex;
+  height: 54px;
+  margin-top: -1px;
+  min-width: 54px;
+  padding: 15px 0;
+}
+
+.store-gallery-2 .all {
+  color: var(--white);
+  font-family: var(--font-family-sfprodisplay-semibold);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-align: center;
+  width: 53px;
+}
+
+.store-gallery-2 .categories-party {
+  background-color: var(--pickled-bluewood);
+  border-radius: 12px;
+  gap: 16px;
+  justify-content: flex-end;
+  min-width: 116px;
+  padding: 14px 9px;
+}
+
+.store-gallery-2 .text-3 {
+  letter-spacing: 0;
+  line-height: 20px;
+  min-width: 14px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.store-gallery-2 .party {
+  letter-spacing: 0;
+  line-height: 20px;
+  width: 53px;
+}
+
+.store-gallery-2 .categories {
+  align-items: flex-start;
+  display: flex;
+  min-width: 139px;
+}
+
+.store-gallery-2 .group {
+  align-items: flex-start;
+  background-color: var(--pickled-bluewood);
+  border-radius: 12px;
+  display: flex;
+  gap: 19px;
+  height: 52px;
+  overflow: hidden;
+  padding: 14px 21px;
+  width: 139px;
+}
+
+.store-gallery-2 .text {
+  letter-spacing: 0;
+  line-height: 20px;
+  min-width: 14px;
+  white-space: nowrap;
+}
+
+.store-gallery-2 .camping {
+  letter-spacing: 0;
+  line-height: 20px;
+  width: 61px;
+}
+
+.store-gallery-2 .group-1 {
+  align-items: flex-start;
+  display: flex;
+  height: 52px;
+  justify-content: center;
+  overflow: hidden;
+  width: 139px;
+}
+
+.store-gallery-2 .overlap-group-1 {
+  align-items: flex-start;
+  background-color: var(--pickled-bluewood);
+  border-radius: 12px;
+  display: flex;
+  gap: 19px;
+  height: 54px;
+  justify-content: flex-end;
+  margin-top: -1px;
+  min-width: 141px;
+  padding: 15px 21px;
+}
+
+.store-gallery-2 .surname {
+  letter-spacing: 0;
+  line-height: 20px;
+  width: 61px;
+}
+
+.store-gallery-2 .categories-2 {
+  align-items: flex-start;
+  display: flex;
+  height: 52px;
+}
+
+.store-gallery-2 .name-3 {
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: 11px;
+  min-height: 17px;
+}

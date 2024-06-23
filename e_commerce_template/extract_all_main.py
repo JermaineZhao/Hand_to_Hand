@@ -1,3 +1,4 @@
+# We will use this
 import os
 import cv2
 import numpy as np
@@ -43,9 +44,22 @@ def post_process_masks(masks, output_dir='segmented_objects', min_area=5):
                 mask[labels_im == label] = 0
         cv2.imwrite(os.path.join(output_dir, f'object_{i}.png'), mask)
 
+# def calculate_iou(mask1, mask2):
+#     intersection = np.logical_and(mask1, mask2)
+#     union = np.logical_or(mask1, mask2)
+#     iou_score = np.sum(intersection) / np.sum(union)
+#     return iou_score
+
+def resize_mask(mask, shape):
+    return cv2.resize(mask, (shape[1], shape[0]), interpolation=cv2.INTER_NEAREST)
+
 def calculate_iou(mask1, mask2):
-    intersection = np.logical_and(mask1, mask2)
-    union = np.logical_or(mask1, mask2)
+    common_shape = (max(mask1.shape[0], mask2.shape[0]), max(mask1.shape[1], mask2.shape[1]))
+    resized_mask1 = resize_mask(mask1, common_shape)
+    resized_mask2 = resize_mask(mask2, common_shape)
+    
+    intersection = np.logical_and(resized_mask1, resized_mask2)
+    union = np.logical_or(resized_mask1, resized_mask2)
     iou_score = np.sum(intersection) / np.sum(union)
     return iou_score
 
@@ -60,6 +74,20 @@ def load_masks(folder_path):
             masks.append(mask)
             filenames.append(filename)
     return masks, filenames
+
+# def filter_similar_masks(masks, filenames, iou_threshold=0.5):
+#     filtered_masks = []
+#     filtered_filenames = []
+#     for i in range(len(masks)):
+#         is_similar = False
+#         for j in range(i):
+#             if calculate_iou(masks[i], masks[j]) > iou_threshold:
+#                 is_similar = True
+#                 break
+#         if not is_similar:
+#             filtered_masks.append(masks[i])
+#             filtered_filenames.append(filenames[i])
+#     return filtered_masks, filtered_filenames
 
 def filter_similar_masks(masks, filenames, iou_threshold=0.5):
     filtered_masks = []
@@ -214,17 +242,15 @@ def resize_images_in_folder(folder, max_size_mb=4):
                     resize_image(file_path, max_size_bytes)
 
 def main1(original_image_path):
-    # original_image_path = '/Users/jermainezhao/hand_hand/items_3.JPG'
+    
     main_segmentation(original_image_path)
-    folder_path = '/Users/jermainezhao/Downloads/e_commerce_template/segmented_objects'
+    folder_path = '/Users/jermainezhao/CalHack_Hand_to_Hand/Hand_to_Hand/e_commerce_template/segmented_objects'
     
     main_filter(folder_path)
 
-    mask_folder = '/Users/jermainezhao/Downloads/e_commerce_template/segmented_objects/filtered'
-    output_folder = '/Users/jermainezhao/Downloads/e_commerce_template/segmented_objects/items'
+    mask_folder = '/Users/jermainezhao/CalHack_Hand_to_Hand/Hand_to_Hand/e_commerce_template/segmented_objects/filtered'
+    output_folder = '/Users/jermainezhao/CalHack_Hand_to_Hand/Hand_to_Hand/e_commerce_template/segmented_objects/items'
     crop(original_image_path, mask_folder, output_folder)
 
     resize_images_in_folder(output_folder)
 
-# if __name__ == "__main__":
-#     main1('/Users/jermainezhao/hand_hand/items_3.JPG')
