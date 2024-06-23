@@ -1,0 +1,23 @@
+:root { 
+  --black: #000000;
+  --pewter: #96a7af;
+  --pickled-bluewood: #30444e;
+  --white: #ffffff;
+  --whitedefault: #ffffff;
+ 
+  --font-size-l: 14px;
+  --font-size-m: 12px;
+  --font-size-xl: 16px;
+  --font-size-xxl: 42px;
+ 
+  --font-family-sfprodisplay-bold: "SFProDisplay-Bold", Helvetica;
+  --font-family-sfprodisplay-regular: "SFProDisplay-Regular", Helvetica;
+  --font-family-sfprotext-regular: "SFProText-Regular", Helvetica;
+}
+.sfprotext-regular-normal-pewter-14px {
+  color: var(--pewter);
+  font-family: var(--font-family-sfprotext-regular);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}

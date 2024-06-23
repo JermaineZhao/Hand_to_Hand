@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/feed-3.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch('/get_links')
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('map-iframe').src = data.tbd_link;
+            document.getElementById('todo-content').textContent = data.todo_content;
+          });
+      });
+    </script>
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="feed-3" />
+    <div class="container-center-horizontal">
+      <div class="feed-3 screen">
+        <div class="overlap-group2">
+          <div class="rectangle"></div>
+          <div class="i-phone-x-status_-bar">
+            <div class="i-phone-x-status-bars-status-bar-black">
+              <div class="i-phone-x-status-bars-status-bar-black-1">
+                <div class="time-style">
+                  <div class="time sfprotext-regular-normal-pewter-14px">
+                    <span class="span0 sfprotext-regular-normal-pewter-14px">9:4</span
+                    ><span class="span1 sfprotext-regular-normal-pewter-14px">1</span>
+                  </div>
+                </div>
+                <img class="cellular-connection" src="img/cellular-connection.svg" alt="Cellular Connection" />
+                <img class="wifi" src="img/wifi.svg" alt="Wifi" />
+                <div class="battery">
+                  <div class="overlap-group">
+                    <div class="capacity"></div>
+                  </div>
+                  <img class="cap" src="img/cap.svg" alt="Cap" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <h1 class="heading">Meetup!</h1>
+          <div class="x3_-elements_-circled_-navigation">
+            <div class="x3_-elements_-circled_-navigation-1">
+              <img
+                class="x3_-elements_-circled"
+                src="img/3-elements-circled-navigation-heart-off.svg"
+                alt="3_Elements_Circled_Navigation\Heart\Off"
+              />
+              <img
+                class="x3_-elements_-circled_-navigation-home-on"
+                src="img/3-elements-circled-navigation-home-on.svg"
+                alt="3_Elements_Circled_Navigation\Home\On"
+              />
+              <div class="x3_-elements_-circled-1"><img class="shape" src="img/shape.svg" alt="Shape" /></div>
+            </div>
+          </div>
+          <div class="map">
+            <div class="group-21">
+              <iframe
+                  id="map-iframe"
+                  width="320"
+                  height="240"
+                  style="border:0"
+                  loading="lazy"
+                  allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          <div class="card_-picture_-text">
+            <div class="group-5">
+              <div class="overlap-group-3">
+                <div class="overlap-group1"><img class="bitmap" src="img/sujin-modified.png" alt="Bitmap" /></div>
+                <div class="flex-col">
+                  <div class="heading-1">Meetup with Sujin</div>
+                  <div class="flex-row-2">
+                    <p class="small-text" id="todo-content">
+                      <!-- Content will be loaded here -->
+                    </p>
+                    <div class="card_-picture_-button-kebab_-menu">
+                      <div class="group-14">
+                        <div class="rectangle-copy-37"></div>
+                        <div class="rectangle-copy-37"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="rectangle-copy-35"></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
