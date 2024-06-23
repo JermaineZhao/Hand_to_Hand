@@ -7,13 +7,34 @@ from ultralytics import YOLO
 from PIL import Image
 
 def load_model(model_path='yolov8m-seg.pt'):
-    return YOLO(model_path)
+    model = YOLO(model_path)
+    onnx_path = model.export(format='onnx')
+    return onnx_path
+
+def convert_onnx_to_openvino(onnx_path, output_dir='openvino_model'):
+    os.system(f'mo --input_model {onnx_path} --output_dir {output_dir}')
+    xml_path = os.path.join(output_dir, 'yolov8m-seg.xml')
+    bin_path = os.path.join(output_dir, 'yolov8m-seg.bin')
+    return xml_path, bin_path
+
+def load_openvino_model(xml_path, bin_path):
+    ie = IECore()
+    net = ie.read_network(model=xml_path, weights=bin_path)
+    exec_net = ie.load_network(network=net, device_name='CPU')
+    return exec_net, net
 
 def read_image(image_path):
     return cv2.imread(image_path)
 
-def instance_segmentation(model, image, conf_threshold=0.04):
-    return model.predict(image, conf=conf_threshold)
+# def instance_segmentation(model, image, conf_threshold=0.04):
+#     return model.predict(image, conf=conf_threshold)
+
+def preprocess_image(image, net):
+    input_blob = next(iter(net.input_info))
+    _, _, height, width = net.input_info[input_blob].input_data.shape
+    resized_image = cv2.resize(image, (width, height))
+    input_data = np.expand_dims(resized_image.transpose(2, 0, 1), axis=0)
+    return input_data
 
 def process_segmentation_results(results):
     if len(results) == 0 or results[0].masks is None:
@@ -110,10 +131,25 @@ def save_filtered_masks(folder_path, filtered_masks, filtered_filenames):
         filepath = os.path.join(output_folder, filename)
         cv2.imwrite(filepath, mask * 255)
 
+# def main_segmentation(original_image_path):
+#     model = load_model()
+#     image = read_image(original_image_path)
+#     results = instance_segmentation(model, image)
+#     masks = process_segmentation_results(results)
+    
+#     if masks.size > 0:
+#         print(f"Converted masks shape: {masks.shape}")
+#         post_process_masks(masks)
+#     else:
+#         print("No masks to process.")
+
 def main_segmentation(original_image_path):
-    model = load_model()
+    onnx_path = load_model()
+    xml_path, bin_path = convert_onnx_to_openvino(onnx_path)
+    exec_net, net = load_openvino_model(xml_path, bin_path)
+    
     image = read_image(original_image_path)
-    results = instance_segmentation(model, image)
+    results = instance_segmentation(exec_net, image, net)
     masks = process_segmentation_results(results)
     
     if masks.size > 0:
@@ -143,6 +179,17 @@ def get_bounding_rect(mask):
     coords = np.column_stack(np.where(mask > 0))
     x, y, w, h = cv2.boundingRect(coords)
     return x, y, w, h
+
+def infer_image(exec_net, input_data):
+    input_blob = next(iter(exec_net.input_info))
+    output_blob = next(iter(exec_net.outputs))
+    result = exec_net.infer(inputs={input_blob: input_data})
+    return result[output_blob]
+
+def instance_segmentation(exec_net, image, net, conf_threshold=0.04):
+    input_data = preprocess_image(image, net)
+    results = infer_image(exec_net, input_data)
+    return results
 
 def process_mask(image, mask, pad=200):
     mask_resized = cv2.resize(mask, (image.shape[1], image.shape[0]), interpolation=cv2.INTER_NEAREST)
